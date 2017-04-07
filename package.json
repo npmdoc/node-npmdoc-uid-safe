@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"uid-safe",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "uid-safe",
+    "description": "api documentation for [uid-safe (v2.1.4)](https://github.com/crypto-utils/uid-safe#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-uid-safe.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-uid-safe) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-uid-safe.svg)](https://travis-ci.org/npmdoc/node-npmdoc-uid-safe)",
     "devDependencies": {
-        "uid-safe": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "uid-safe": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-uid-safe",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-uid-safe",
+    "keywords": [
+        "documentation",
+        "uid-safe"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_uid_safe.js",
+    "name": "npmdoc-uid-safe",
+    "nameAlias": "npmdoc_uid_safe",
+    "nameOriginal": "npmdoc-uid-safe",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-uid-safe"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
