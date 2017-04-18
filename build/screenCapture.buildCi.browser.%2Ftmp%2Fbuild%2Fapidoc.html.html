@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.uid-safe.uid-safe">
+            function <span class="apidocSignatureSpan"></span>uid-safe
+            <span class="apidocSignatureSpan">(length, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.uid-safe.sync">
             function <span class="apidocSignatureSpan">uid-safe.</span>sync
             <span class="apidocSignatureSpan">(length)</span>
@@ -69,6 +78,41 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.uid-safe" id="apidoc.module.uid-safe">module uid-safe</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.uid-safe.uid-safe" id="apidoc.element.uid-safe.uid-safe">
+        function <span class="apidocSignatureSpan"></span>uid-safe
+        <span class="apidocSignatureSpan">(length, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uid(length, callback) {
+  // validate callback is a function, if provided
+  if (callback !== undefined &amp;&amp; typeof callback !== 'function') {
+    throw new TypeError('argument callback must be a function')
+  }
+
+  // require the callback without promises
+  if (!callback &amp;&amp; !global.Promise) {
+    throw new TypeError('argument callback is required')
+  }
+
+  if (callback) {
+    // classic callback style
+    return generateUid(length, callback)
+  }
+
+  return new Promise(function executor (resolve, reject) {
+    generateUid(length, function onUid (err, str) {
+      if (err) return reject(err)
+      resolve(str)
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
