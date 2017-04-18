@@ -1,9 +1,14 @@
-# api documentation for  [uid-safe (v2.1.4)](https://github.com/crypto-utils/uid-safe#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-uid-safe.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-uid-safe) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-uid-safe.svg)](https://travis-ci.org/npmdoc/node-npmdoc-uid-safe)
+# npmdoc-uid-safe
+
+#### api documentation for  [uid-safe (v2.1.4)](https://github.com/crypto-utils/uid-safe#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-uid-safe.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-uid-safe) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-uid-safe.svg)](https://travis-ci.org/npmdoc/node-npmdoc-uid-safe)
+
 #### URL and cookie safe UIDs
 
-[![NPM](https://nodei.co/npm/uid-safe.png?downloads=true)](https://www.npmjs.com/package/uid-safe)
+[![NPM](https://nodei.co/npm/uid-safe.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/uid-safe)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-uid-safe/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-uid-safe_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-uid-safe/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-uid-safe/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-uid-safe/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-uid-safe/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-uid-safe/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-uid-safe/build/screenCapture.npmPackageListing.svg)
 
@@ -21,12 +26,10 @@
     },
     "contributors": [
         {
-            "name": "Douglas Christopher Wilson",
-            "email": "doug@somethingdoug.com"
+            "name": "Douglas Christopher Wilson"
         },
         {
             "name": "Jonathan Ong",
-            "email": "me@jongleberry.com",
             "url": "http://jongleberry.com"
         }
     ],
@@ -68,21 +71,17 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "dougwilson",
-            "email": "doug@somethingdoug.com"
+            "name": "dougwilson"
         },
         {
-            "name": "fishrock123",
-            "email": "fishrock123@rocketmail.com"
+            "name": "fishrock123"
         },
         {
-            "name": "jongleberry",
-            "email": "jonathanrichardong@gmail.com"
+            "name": "jongleberry"
         }
     ],
     "name": "uid-safe",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/crypto-utils/uid-safe.git"
@@ -95,44 +94,6 @@
     },
     "version": "2.1.4"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module uid-safe](#apidoc.module.uid-safe)
-1.  [function <span class="apidocSignatureSpan">uid-safe.</span>sync (length)](#apidoc.element.uid-safe.sync)
-
-
-
-# <a name="apidoc.module.uid-safe"></a>[module uid-safe](#apidoc.module.uid-safe)
-
-#### <a name="apidoc.element.uid-safe.sync"></a>[function <span class="apidocSignatureSpan">uid-safe.</span>sync (length)](#apidoc.element.uid-safe.sync)
-- description and source-code
-```javascript
-function uidSync(length) {
-  return toString(randomBytes.sync(length))
-}
-```
-- example usage
-```shell
-...
-
-'''js
-uid(18).then(function (string) {
-  // do something with the string
-})
-'''
-
-### uid.sync(byteLength)
-
-A synchronous version of above.
-
-'''js
-var string = uid.sync(18)
-'''
-...
 ```
 
 
